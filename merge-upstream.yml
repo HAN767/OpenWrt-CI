@@ -36,7 +36,6 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global pull.rebase false
         git config --global --list
-
     - name: Load upstream commits
       run: git pull https://github.com/coolsnowwolf/lede.git --log --no-commit
 
@@ -50,7 +49,6 @@ jobs:
         else
         echo "There is no merge commits."
         fi
-
     - name: Push Commits
       env:
         DOWNSTREAM_BRANCH: master
